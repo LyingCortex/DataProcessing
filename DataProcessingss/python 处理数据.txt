@@ -1,0 +1,35 @@
+1. 读行，对列进行处理
+2. 写文件
+3. 创建目录。
+、
+
+
+
+
+上传至github
+
+注明分析的过程，写篇类似的技术blog，虽然很low，但还是有必要叙述一下的。
+
+
+用到的知识；
+1. 读取一个文件夹下的所有文件。
+import os
+
+
+os.listdir(path)
+
+if not os.path.exists(save_dir1):
+    os.mkdir(save_dir1)      #创建文件目录
+
+
+
+2. 正则表达式
+rePattern = re.compile('\d.\d\d\n$')
+fout1.writelines(rePattern.sub(str('%.2f'%(float(row[-1])/const1))+'\n', line))
+
+
+3.  写文件
+fout1 = file(save_path1,'w')
+
+fout1.writelines（-------）
+
